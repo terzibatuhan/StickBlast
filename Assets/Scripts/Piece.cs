@@ -23,7 +23,8 @@ public class Piece : MonoBehaviour
     void OnMouseDrag()
     {
         foreach (var edge in EdgeHolder.Instance.GetAllEdges())
-            edge.ResetColor();
+            if (!edge.IsOccupied)
+                edge.ResetColor();
 
         if (_isDragging)
         {
@@ -63,6 +64,8 @@ public class Piece : MonoBehaviour
 
         if (allSnapped)
         {
+            PieceSpawner.Instance.ChangePieceCount(-1);
+
             Destroy(gameObject);
         }
         else

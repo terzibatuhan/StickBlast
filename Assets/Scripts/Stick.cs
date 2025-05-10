@@ -65,7 +65,6 @@ public class Stick : MonoBehaviour
             yield return null;
         }
 
-        transform.position = targetPos;
-        transform.localScale = startScale;
+        Destroy(gameObject);
     }
 }

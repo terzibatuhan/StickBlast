@@ -1,24 +1,69 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Cell : MonoBehaviour
 {
-    private bool _isPainted = false;
+    public int X;
+    public int Y;
+
+    [SerializeField] private List<Edge> _connectedEdges = new();
+
+    public bool IsOccupied {  get; private set; }
+
+    private Image _image;
+    private Color _defaultColor;
+
+    private void Awake()
+    {
+        _image = GetComponent<Image>();
+        _defaultColor = _image.color;
+
+        AssignEdges();
+    }
 
     public void PaintCell()
     {
-        _isPainted = true;
-        GetComponent<Image>().color = Color.green;
+        IsOccupied = true;
+        _image.color = Color.white;
     }
 
     public void ClearCell()
     {
-        _isPainted = false;
-        GetComponent<Image>().color = Color.white;
+        IsOccupied = false;
+        _image.color = _defaultColor;
     }
 
-    private void OnMouseDown()
+    public void CheckIfSurrounded()
     {
+        foreach (Edge edge in _connectedEdges)
+            if (!edge.IsOccupied)
+                return;
+
         PaintCell();
+    }
+
+    public void AssignEdges()
+    {
+        foreach (var edge in EdgeHolder.Instance.GetAllEdges())
+        {
+            if (edge.Orientation == Orientation.Horizontal)
+            {
+                if (edge.X == X && edge.Y == Y) // Top edge
+                    _connectedEdges.Add(edge);
+                else if (edge.X == X + 1 && edge.Y == Y) // Bottom edge
+                    _connectedEdges.Add(edge);
+            }
+            else if (edge.Orientation == Orientation.Vertical)
+            {
+                if (edge.X == X && edge.Y == Y) // Left edge
+                    _connectedEdges.Add(edge);
+                else if (edge.X == X && edge.Y == Y + 1) // Right edge
+                    _connectedEdges.Add(edge);
+            }
+        }
+
+        foreach (Edge edge in _connectedEdges)
+            edge.AssignCell(this);
     }
 }

@@ -12,6 +12,9 @@ public class EdgeHolder : MonoBehaviour
         Instance = this;
 
         _allEdges.AddRange(FindObjectsByType<Edge>(FindObjectsSortMode.InstanceID));
+
+        foreach (var edge in _allEdges)
+            edge.AssignPoints();
     }
 
     public List<Edge> GetAllEdges()
