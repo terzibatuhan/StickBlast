@@ -24,7 +24,7 @@ public class Piece : MonoBehaviour
     {
         foreach (var edge in EdgeHolder.Instance.GetAllEdges())
             if (!edge.IsOccupied)
-                edge.ResetColor();
+                edge.ClearPreview();
 
         if (_isDragging)
         {

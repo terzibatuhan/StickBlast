@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2770fcb757036d4428a913bd39adc96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pieceSpawner: {fileID: 1683800440}
 --- !u!1 &10817356
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 4
   Y: 2
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &23030336
 GameObject:
@@ -376,6 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 3
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &118628619
 GameObject:
@@ -467,6 +468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 1
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &121069107
 GameObject:
@@ -721,6 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 1
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &202326598
 GameObject:
@@ -900,6 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 3
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &234494388
 GameObject:
@@ -1023,6 +1027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 2
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &255157063
 GameObject:
@@ -1114,6 +1119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 2
+  _connectedEdges: []
 --- !u!1 &266986906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 0
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &286842654
 GameObject:
@@ -1383,6 +1390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 0
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &293938845
 GameObject:
@@ -1474,6 +1482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 2
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &315642088
 GameObject:
@@ -1565,6 +1574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 3
+  _connectedEdges: []
 --- !u!1 &356099589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,6 +1665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 0
+  _connectedEdges: []
 --- !u!1 &357339346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 1
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &364990373
 GameObject:
@@ -1836,6 +1848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 2
+  _connectedEdges: []
 --- !u!1 &367997488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 1
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &462750023
 GameObject:
@@ -2514,6 +2528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 3
+  _connectedEdges: []
 --- !u!1 &565544892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,6 +2724,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 3
+  _connectedEdges: []
+--- !u!1 &585151446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585151447}
+  - component: {fileID: 585151448}
+  m_Layer: 0
+  m_Name: GridManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585151447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585151446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &585151448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585151446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04561ec35708d34fb4702143db3b521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &597077754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 0
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &603498052
 GameObject:
@@ -3343,6 +3404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 2
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &648110769
 GameObject:
@@ -3597,6 +3659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 3
+  _connectedEdges: []
 --- !u!1 &713532382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,6 +3750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 4
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &737670759
 GameObject:
@@ -3945,6 +4009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 4
   Y: 1
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &774283129
 GameObject:
@@ -4036,6 +4101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 3
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &816667557
 GameObject:
@@ -4127,6 +4193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 1
+  _connectedEdges: []
 --- !u!1 &849636913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 4
   Y: 0
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &859790632
 GameObject:
@@ -4308,6 +4376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 2
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &935157740
 GameObject:
@@ -4399,6 +4468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 3
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &935353118
 GameObject:
@@ -4490,6 +4560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 2
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &979667371
 GameObject:
@@ -4581,6 +4652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 3
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1006023219
 GameObject:
@@ -4760,6 +4832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 0
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1029566646
 GameObject:
@@ -5203,6 +5276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 4
   Y: 3
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1128529592
 GameObject:
@@ -5294,6 +5368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 2
+  _connectedEdges: []
 --- !u!1 &1173068104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,6 +5459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 2
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1180049785
 GameObject:
@@ -5475,6 +5551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 0
+  _connectedEdges: []
 --- !u!1 &1197047839
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,6 +5642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 0
+  _connectedEdges: []
 --- !u!1 &1205535292
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,6 +6057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 2
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1308503466
 GameObject:
@@ -6070,6 +6149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 4
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1310227704
 GameObject:
@@ -6161,6 +6241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 3
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1318380548
 GameObject:
@@ -6340,6 +6421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 2
+  _connectedEdges: []
 --- !u!1 &1459853784
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,6 +6675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 2
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1492818402
 GameObject:
@@ -6898,6 +6981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 0
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1596721283
 GameObject:
@@ -6989,6 +7073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 3
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1597574874
 GameObject:
@@ -7080,6 +7165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 1
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1608707515
 GameObject:
@@ -7259,6 +7345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 1
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1661200948
 GameObject:
@@ -7350,6 +7437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 4
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1665992366
 GameObject:
@@ -7567,6 +7655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 1
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &1740786533
 GameObject:
@@ -7658,6 +7747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 1
+  _connectedEdges: []
 --- !u!1 &1752600449
 GameObject:
   m_ObjectHideFlags: 0
@@ -7779,6 +7869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 0
+  _connectedEdges: []
 --- !u!1 &1796395260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7869,6 +7960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 3
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1824132032
 GameObject:
@@ -8048,6 +8140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 2
   Y: 1
+  _connectedEdges: []
 --- !u!1 &1892037184
 GameObject:
   m_ObjectHideFlags: 0
@@ -8138,6 +8231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 4
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &1935936277
 GameObject:
@@ -8229,6 +8323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 1
+  _connectedEdges: []
 --- !u!1 &1949112768
 GameObject:
   m_ObjectHideFlags: 0
@@ -8407,6 +8502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 1
   Y: 0
+  _connectedCells: []
   Orientation: 0
 --- !u!1 &2026891174
 GameObject:
@@ -8498,6 +8594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 0
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &2043362358
 GameObject:
@@ -8589,6 +8686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 3
   Y: 1
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &2098727320
 GameObject:
@@ -8680,6 +8778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   Y: 0
+  _connectedCells: []
   Orientation: 1
 --- !u!1 &2118033854
 GameObject:
@@ -8774,6 +8873,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 5509552}
+  - {fileID: 585151447}
   - {fileID: 1683800439}
   - {fileID: 462750024}
   - {fileID: 423329299}

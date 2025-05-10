@@ -18,7 +18,10 @@ public class Cell : MonoBehaviour
     {
         _image = GetComponent<Image>();
         _defaultColor = _image.color;
+    }
 
+    private void Start()
+    {
         AssignEdges();
     }
 
@@ -26,12 +29,17 @@ public class Cell : MonoBehaviour
     {
         IsOccupied = true;
         _image.color = Color.white;
+
+        GridManager.Instance.CheckForFullRowsAndColumns();
     }
 
     public void ClearCell()
     {
         IsOccupied = false;
         _image.color = _defaultColor;
+
+        foreach (Edge edge in _connectedEdges)
+            edge.ClearState();
     }
 
     public void CheckIfSurrounded()

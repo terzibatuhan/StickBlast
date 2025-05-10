@@ -34,12 +34,21 @@ public class Edge : MonoBehaviour
         _pointB.Highlight();
     }
 
-    public void ResetColor()
+    public void ClearPreview() // Removes only the highlight color if the cell is not occupied
     {
         _image.color = _defaultColor;
 
-        _pointA.ResetColor();
-        _pointB.ResetColor();
+        _pointA.ClearPreview();
+        _pointB.ClearPreview();
+    }
+
+    public void ClearState() // Resets the cell completely: clears the highlight and marks it as unoccupied
+    {
+        _image.color = _defaultColor;
+        IsOccupied = false;
+
+        _pointA.ClearState();
+        _pointB.ClearState();
     }
 
     public void Occupy()

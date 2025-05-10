@@ -16,7 +16,7 @@ public class Point : MonoBehaviour
 
     public void Paint()
     {
-        if (IsOccupied) 
+        if (IsOccupied)
             return;
 
         IsOccupied = true;
@@ -28,11 +28,17 @@ public class Point : MonoBehaviour
         _image.color = Color.white;
     }
 
-    public void ResetColor()
+    public void ClearPreview() // Removes only the highlight color if the cell is not occupied
     {
         if (IsOccupied)
             return;
 
+        _image.color = _defaultColor;
+    }
+
+    public void ClearState() // Resets the cell completely: clears the highlight and marks it as unoccupied
+    {
+        IsOccupied = false;
         _image.color = _defaultColor;
     }
 }

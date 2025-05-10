@@ -16,9 +16,9 @@ public class PieceSpawner : MonoBehaviour
 
     public void SpawnPiece()
     {
-        Piece piece0 = Instantiate(_piecePrefabs[0], _spawnPoints[0].position, Quaternion.identity);
-        Piece piece1 = Instantiate(_piecePrefabs[1], _spawnPoints[1].position, Quaternion.identity);
-        Piece piece2 = Instantiate(_piecePrefabs[0], _spawnPoints[2].position, Quaternion.identity);
+        _ = Instantiate(_piecePrefabs[Random.Range(0, _piecePrefabs.Length)], _spawnPoints[0].position, Quaternion.identity);
+        _ = Instantiate(_piecePrefabs[Random.Range(0, _piecePrefabs.Length)], _spawnPoints[1].position, Quaternion.identity);
+        _ = Instantiate(_piecePrefabs[Random.Range(0, _piecePrefabs.Length)], _spawnPoints[2].position, Quaternion.identity);
 
         _remainingPieces = 3;
     }
