@@ -4,10 +4,11 @@ using System.Collections.Generic;
 
 public class Piece : MonoBehaviour
 {
-    private Vector3 _offset;
     private bool _isDragging;
     private Vector3 _originalPosition;
     private Vector3 _originalScale;
+
+    public Vector3 Offset;
 
     public Direction[] Directions;
 
@@ -26,7 +27,6 @@ public class Piece : MonoBehaviour
 
     void OnMouseDown()
     {
-        _offset = transform.position - GetMouseWorldPosition();
         transform.localScale = Vector3.one;
         _isDragging = true;
     }
@@ -40,7 +40,7 @@ public class Piece : MonoBehaviour
         if (_isDragging)
         {
             Vector3 mouseWorldPos = GetMouseWorldPosition();
-            transform.position = mouseWorldPos + _offset;
+            transform.position = mouseWorldPos + Offset;
         }
 
         var edges = GetPlaceableEdges();
